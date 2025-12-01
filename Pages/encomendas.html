@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encomendas - Parégis Doceria</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/encomendas.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-birthday-cake"></i>
+                    <span>Doce Termo</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Início</a></li>
+                    <li><a href="index.html#produtos" class="nav-link">Produtos</a></li>
+                    <li><a href="index.html#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+                    <li><a href="encomendas.html" class="nav-link active">Encomendas</a></li>
+                    <li><a href="pedidos.html" class="nav-link">Fazer Pedido</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="encomendas-hero">
+        <div class="container">
+            <h1 class="page-title">Suas Encomendas</h1>
+            <p class="page-subtitle">Acompanhe o status dos seus pedidos</p>
+        </div>
+    </section>
+
+    <!-- Filtros -->
+    <section class="filtros-section">
+        <div class="container">
+            <div class="filtros">
+                <button class="filtro-btn active" data-status="todos">Todos</button>
+                <button class="filtro-btn" data-status="pendente">Pendentes</button>
+                <button class="filtro-btn" data-status="confirmado">Confirmados</button>
+                <button class="filtro-btn" data-status="produzindo">Em Produção</button>
+                <button class="filtro-btn" data-status="pronto">Prontos</button>
+                <button class="filtro-btn" data-status="entregue">Entregues</button>
+            </div>
+            <div class="search-box">
+                <!-- Barra de busca filtra encomendas por número ou produto -->
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Buscar por número do pedido ou produto..." id="searchInput">
+            </div>
+        </div>
+    </section>
+
+    <!-- Nova Encomenda -->
+    <section class="nova-encomenda-section">
+        <div class="container">
+            <button class="btn-nova-encomenda" id="btnNovaEncomenda">
+                <i class="fas fa-plus"></i>
+                Nova Encomenda
+            </button>
+        </div>
+    </section>
+
+    <!-- Lista de Encomendas -->
+    <section class="encomendas-lista">
+        <div class="container">
+            <div class="encomendas-grid" id="encomendasGrid">
+                <!-- Cards renderizados via JS com base no localStorage -->
+                <!-- As encomendas serão carregadas dinamicamente via JavaScript -->
+            </div>
+            
+            <!-- Estado vazio -->
+            <div class="empty-state" id="emptyState" style="display: none;">
+                <i class="fas fa-cake-candles"></i>
+                <h3>Nenhuma encomenda encontrada</h3>
+                <p>Que tal fazer seu primeiro pedido?</p>
+                <a href="index.html#produtos" class="btn-ver-produtos">Ver Produtos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Nova Encomenda -->
+    <div class="modal-overlay" id="modalEncomenda">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Nova Encomenda</h2>
+                <button class="modal-close" id="modalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Formulário completo de coleta de dados para nova encomenda -->
+                <form id="formEncomenda">
+                    <div class="form-section">
+                        <h3>Dados do Cliente</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="clienteNome">Nome Completo *</label>
+                                <input type="text" id="clienteNome" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="clientePhone">Telefone *</label>
+                                <input type="tel" id="clientePhone" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="clienteEmail">E-mail</label>
+                            <input type="email" id="clienteEmail">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Detalhes do Produto</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="produtoTipo">Tipo de Produto *</label>
+                                <select id="produtoTipo" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="bolo">Bolo Artesanal</option>
+                                    <option value="brigadeiro">Brigadeiros Gourmet</option>
+                                    <option value="cookies">Cookies Artesanais</option>
+                                    <option value="sobremesa">Sobremesas Geladas</option>
+                                    <option value="taca">Taças Gourmet</option>
+                                    <option value="especial">Doces Especiais</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="produtoQuantidade">Quantidade *</label>
+                                <input type="number" id="produtoQuantidade" min="1" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="produtoSabor">Sabor/Personalização</label>
+                            <input type="text" id="produtoSabor" placeholder="Ex: Chocolate, Morango, tema específico...">
+                        </div>
+                        <div class="form-group">
+                            <label for="produtoObservacoes">Observações Especiais</label>
+                            <textarea id="produtoObservacoes" rows="3" placeholder="Alergias, preferências, instruções especiais..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Entrega</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="dataEntrega">Data de Entrega *</label>
+                                <input type="date" id="dataEntrega" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="horaEntrega">Horário</label>
+                                <input type="time" id="horaEntrega">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="enderecoEntrega">Endereço de Entrega</label>
+                            <textarea id="enderecoEntrega" rows="2" placeholder="Deixe em branco para retirada na loja"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Orçamento</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="valorEstimado">Valor Estimado (R$)</label>
+                                <input type="number" id="valorEstimado" step="0.01" min="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="formaPagamento">Forma de Pagamento</label>
+                                <select id="formaPagamento">
+                                    <option value="">A definir</option>
+                                    <option value="dinheiro">Dinheiro</option>
+                                    <option value="cartao">Cartão</option>
+                                    <option value="pix">PIX</option>
+                                    <option value="transferencia">Transferência</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <!-- Ações do modal para descartar ou persistir informações -->
+                        <button type="button" class="btn-cancel" id="btnCancel">Cancelar</button>
+                        <button type="submit" class="btn-save">Criar Encomenda</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Detalhes da Encomenda -->
+    <div class="modal-overlay" id="modalDetalhes">
+        <div class="modal modal-detalhes">
+            <div class="modal-header">
+                <h2>Detalhes da Encomenda</h2>
+                <button class="modal-close" id="modalDetalhesClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="detalhesContent">
+                <!-- Populado dinamicamente quando usuário abre um card -->
+                <!-- Conteúdo será preenchido dinamicamente -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <i class="fas fa-birthday-cake"></i>
+                    <span>Doce Termo</span>
+                </div>
+                <p>&copy; 2025 Doce Termo. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JS/script.js"></script>
+    <script src="JS/encomendas.js"></script>
+</body>
+</html>

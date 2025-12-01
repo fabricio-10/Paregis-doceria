@@ -1,0 +1,9 @@
+{
+  "name": "doceria-termo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site estático da Doce Termo",
+  "scripts": {
+    "dev": "npx http-server . -p 5173 -a 0.0.0.0 -c-1"
+  }
+}

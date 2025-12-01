@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalizar Pedido - Doce Termo</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/pedidos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-birthday-cake"></i>
+                    <span>Doce Termo</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Início</a></li>
+                    <li><a href="index.html#produtos" class="nav-link">Produtos</a></li>
+                    <li><a href="index.html#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+                    <!-- <li><a href="encomendas.html" class="nav-link">Encomendas</a></li> -->
+                    <li><a href="Pages/pedidos.html" class="nav-link active">Fazer Pedido</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pedidos-hero">
+        <div class="container">
+            <h1 class="page-title">Personalize seu Pedido</h1>
+            <p class="page-subtitle">Escolha um produto, ajuste cada detalhe e acompanhe o valor em tempo real.</p>
+        </div>
+    </section>
+
+    <!-- Seleção de Produtos -->
+    <section class="selecao-produto" id="produtos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Passo 1</span>
+                <h2>Escolha o Produto</h2>
+                <p>Selecione uma das opções abaixo para abrir o formulário de personalização.</p>
+            </div>
+            <div class="produtos-carousel">
+                    <!-- Cada card de produto abre o formulário com opções específicas -->
+                <div class="produto-item" data-produto="bolo">
+                    <span class="produto-badge">Mais pedido</span>
+                    <div class="produto-visual">
+                        <img src="https://delicious.com.br/wp-content/uploads/2020/11/DSC_0323.jpg" alt="Bolo artesanal" loading="lazy">
+                    </div>
+                    <h3>Bolos Artesanais</h3>
+                    <p>Montamos o bolo perfeito para sua festa com massas, recheios e decorações especiais.</p>
+                    <div class="preco-info">
+                        <span class="preco-base">A partir de R$ 45,00</span>
+                    </div>
+                    <button class="btn-selecionar" type="button">Personalizar</button>
+                </div>
+
+                <div class="produto-item" data-produto="brigadeiro">
+                    <div class="produto-visual">
+                        <img src="https://www.sabornamesa.com.br/media/k2/items/cache/5003d452a8da016f3ed02a6385cf54e8_XL.jpg" alt="Brigadeiros gourmet" loading="lazy">
+                    </div>
+                    <h3>Brigadeiros Gourmet</h3>
+                    <p>Escolha os sabores favoritos e a apresentação ideal para presentear ou encantar na festa.</p>
+                    <div class="preco-info">
+                        <span class="preco-base">R$ 3,50 cada</span>
+                    </div>
+                    <button class="btn-selecionar" type="button">Personalizar</button>
+                </div>
+
+                <div class="produto-item" data-produto="cookies">
+                    <div class="produto-visual">
+                        <img src="https://static.giulianaflores.com.br/images/product/rs-4163-11244-1.jpg?ims=600x600" alt="Cookies artesanais" loading="lazy">
+                    </div>
+                    <h3>Cookies Artesanais</h3>
+                    <p>Receitas cheias de sabor com opções irresistíveis para qualquer momento do dia.</p>
+                    <div class="preco-info">
+                        <span class="preco-base">R$ 2,50 cada</span>
+                    </div>
+                    <button class="btn-selecionar" type="button">Personalizar</button>
+                </div>
+
+                <div class="produto-item" data-produto="sobremesa">
+                    <div class="produto-visual">
+                        <img src="https://minhasreceitinhas.com.br/wp-content/uploads/2022/10/maxresdefault-2022-10-04T094903.823-730x365.jpg" alt="Sobremesas geladas" loading="lazy">
+                    </div>
+                    <h3>Sobremesas Geladas</h3>
+                    <p>Mousses, pavês e delícias refrescantes para adoçar qualquer ocasião especial.</p>
+                    <div class="preco-info">
+                        <span class="preco-base">A partir de R$ 8,00</span>
+                    </div>
+                    <button class="btn-selecionar" type="button">Personalizar</button>
+                </div>
+
+                <div class="produto-item" data-produto="taca">
+                    <div class="produto-visual">
+                        <img src="https://www.estadao.com.br/resizer/v2/K2QRSMKUOJMBDPNNH32QFWFP2E.jpg?quality=80&auth=235aa4f2617f3921d805d05ad79c80b01f8bf4e1992830456c8e346f1c7d0e29&width=380" alt="Taças gourmet" loading="lazy">
+                    </div>
+                    <h3>Taças Gourmet</h3>
+                    <p>Camadas generosas de sabores e texturas com apresentação impecável para impressionar.</p>
+                    <div class="preco-info">
+                        <span class="preco-base">R$ 12,00 cada</span>
+                    </div>
+                    <button class="btn-selecionar" type="button">Personalizar</button>
+                </div>
+
+                <div class="produto-item" data-produto="especial">
+                    <span class="produto-badge">Sob medida</span>
+                    <div class="produto-visual">
+                        <img src="https://kitfestabh.com.br/wp-content/uploads/2023/12/docinhos-gourmet-mais-vendidos10-1-1024x576.webp" alt="Doces especiais" loading="lazy">
+                    </div>
+                    <h3>Doces Especiais</h3>
+                    <p>Projetos exclusivos para datas marcantes com personalização completa e orçamento sob consulta.</p>
+                    <div class="preco-info">
+                        <span class="preco-base">Sob consulta</span>
+                    </div>
+                    <button class="btn-selecionar" type="button">Personalizar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personalização -->
+    <section class="personalizacao-section" id="personalizacaoSection" style="display: none;">
+        <div class="container personalizacao-container">
+            <div class="produto-preview">
+                <div class="preview-header">
+                    <button id="btnVoltar" class="btn-voltar" type="button">
+                        <i class="fas fa-arrow-left"></i>
+                        Voltar
+                    </button>
+                    <h3 id="produtoSelecionadoTitulo">Selecione um produto</h3>
+                </div>
+                <div class="preview-visual" id="previewVisual">
+                    <img src="https://images.unsplash.com/photo-1543738066-00a7907e9de1?auto=format&fit=crop&w=400&q=80" alt="Pré-visualização do produto">
+                </div>
+                <div class="preview-info">
+                    <!-- Valores atualizados em tempo real conforme personalização -->
+                    <div class="preco-preview">
+                        <span class="label">Valor estimado</span>
+                        <span class="valor" id="valorTotal">R$ 0,00</span>
+                    </div>
+                    <div class="prazo-preview">
+                        <span class="label">Prazo de produção</span>
+                        <span class="prazo" id="prazoEntrega">Escolha um produto</span>
+                    </div>
+                </div>
+                <div class="resumo-pedido">
+                    <h4>Resumo do Pedido</h4>
+                    <ul id="listaresumo">
+                        <li>Nenhum item selecionado</li>
+                    </ul>
+                </div>
+                <div class="preview-actions">
+                    <button id="btnWhatsapp" class="btn-whatsapp" type="button">
+                        <i class="fab fa-whatsapp"></i>
+                        Enviar no WhatsApp
+                    </button>
+                    <button id="btnNovoPedido" class="btn-novo-pedido" type="button">
+                        <i class="fas fa-clipboard-list"></i>
+                        Novo Pedido
+                    </button>
+                </div>
+            </div>
+
+            <form id="formPersonalizacao" class="formulario-personalizacao">
+                <div class="form-section">
+                    <h3><i class="fas fa-user"></i> Dados do Cliente</h3>
+                    <div class="form-group">
+                        <label for="clienteNomePedido">Nome Completo *</label>
+                        <input type="text" id="clienteNomePedido" placeholder="Como devemos te chamar?" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="clientePhonePedido">Telefone *</label>
+                        <input type="tel" id="clientePhonePedido" placeholder="(11) 99999-9999" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="clienteEmailPedido">E-mail</label>
+                        <input type="email" id="clienteEmailPedido" placeholder="Seu melhor e-mail (opcional)">
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3><i class="fas fa-sliders-h"></i> Personalização do Produto</h3>
+                    <div id="opcoesProduto">
+                        <!-- Espaço recebe blocos dinâmicos conforme tipo de produto -->
+                        <p>Escolha um produto na etapa anterior para ver as opções de personalização.</p>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3><i class="fas fa-truck"></i> Entrega</h3>
+                    <div class="form-group">
+                        <label>
+                            <input type="radio" name="tipoEntrega" value="retirada" checked>
+                            <span class="radio-custom" aria-hidden="true"></span>
+                            Retirar na loja 
+                        </label>
+                        <label>
+                            <input type="radio" name="tipoEntrega" value="entrega" id="entrega">
+                            <span class="radio-custom" aria-hidden="true"></span>
+                            Receber no endereço informado
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="dataEntregaPedido">Data de entrega *</label>
+                        <input type="date" id="dataEntregaPedido" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="horaEntregaPedido">Horário preferencial</label>
+                        <input type="time" id="horaEntregaPedido">
+                    </div>
+                    <div class="form-group" id="enderecoGroup">
+                        <label for="enderecoEntregaPedido">Endereço completo *</label>
+                        <textarea id="enderecoEntregaPedido" rows="3" placeholder="Rua, número, bairro, cidade e referência"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3><i class="fas fa-comment-dots"></i> Observações</h3>
+                    <div class="form-group">
+                        <label for="observacoesPedido">Deixe algum detalhe importante</label>
+                        <textarea id="observacoesPedido" rows="3" placeholder="Alergias, preferências ou detalhes finais"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <!-- Botão esquerdo monta mensagem de orçamento sem finalizar -->
+                    <button type="button" id="btnOrcamento" class="btn-orcamento">
+                        <i class="fas fa-calculator"></i>
+                        Solicitar orçamento via WhatsApp
+                    </button>
+                    <button type="submit" class="btn-finalizar">
+                        <i class="fas fa-check-circle"></i>
+                        Finalizar pedido
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <i class="fas fa-birthday-cake"></i>
+                    <span>Doce Termo</span>
+                </div>
+                <p>&copy; 2025 Doce Termo. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JS/script.js"></script>
+    <script src="JS/pedidos.js"></script>
+</body>
+</html>
