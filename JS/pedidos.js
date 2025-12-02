@@ -1016,7 +1016,7 @@ class PedidoManager {
         if (!this.validarDados(dados)) return;
 
         const mensagem = this.criarMensagemWhatsApp(dados);
-        const url = `https://wa.me/5511999999999?text=${encodeURIComponent(mensagem)}`;
+        const url = `https://wa.me/5511980927318?text=Quero%20saber%20sobre%20seus%20produtos...=${encodeURIComponent(mensagem)}`;
         window.open(url, '_blank');
     }
 
