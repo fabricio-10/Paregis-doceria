@@ -1,6 +1,6 @@
-
-
-
+<h1> Projeto desenvolvido para a Parégis</h1>
+<p> Criado por Aline Estrella, Ana Agatha Apolinario, Fabrício, Gabriel Damasco e Manfrere.</p> <br>
+<p> Em parceria com Henrique Miguel.</p>
 
 ### Seções
 1. **Header** - Navegação fixa com logo
