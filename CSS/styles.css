@@ -5,15 +5,15 @@
 }
 
 :root {
-    --primary-pink: #ff6b9d;
-    --primary-purple: #8b5cf6;
-    --light-pink: #ffc0cb;
-    --light-purple: #e4c1f9;
-    --dark-purple: #6a1b9a;
-    --white: #ffffff;
-    --light-gray: #f8f9fa;
-    --text-dark: #2d3748;
-    --text-light: #718096;
+    --primary-pink: hsl(241, 89%, 22%);
+    --primary-purple: #111111;
+    --light-pink: #00f2fa;
+    --light-purple: #9b9b9b;
+    --dark-purple: #141313;
+    --white: #dbdbdb; 
+    --light-gray: #77aee6;
+    --text-dark: #000000;
+    --text-light: hsl(240, 2%, 12%);
     --gradient: linear-gradient(135deg, var(--primary-pink), var(--primary-purple));
     --gradient-light: linear-gradient(135deg, var(--light-pink), var(--light-purple));
     --shadow: 0 10px 25px rgba(139, 92, 246, 0.1);
