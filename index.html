@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doce Termo - Doceria Artesanal</title>
+    <title>Doceria - Parégis </title>
+    <!-- LINKANDO OS ICONES-->
     <link rel="shortcut icon" href="Imagens/cliente (1).png" type="image/x-icon">
     <link rel="stylesheet" href="CSS/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
-    <!-- Header -->
+    <!-- COMEÇANDO O SITE-->
     <header class="header">
-        <nav class="navbar">
+        <nav class="navegacao">
             <div class="container">
-                <div class="logo">
-                    <img src="Imagens/cliente (1).png" alt="" width="50px">
-                    <span>Parégis Doceria</span>
-                </div>
                 <ul class="nav-menu">
+                    <!-- a logo do lado do menu-->
+                    <div class="logo">
+                        <img src="Imagens/cliente (1).png" alt="" width="50px">
+                        <span>Parégis Doceria</span>
+                    </div>
                     <li><a href="#home" class="nav-link">Início</a></li>
                     <li><a href="#produtos" class="nav-link">Produtos</a></li>
                     <li><a href="#sobre" class="nav-link">Sobre</a></li>
                     <li><a href="#contato" class="nav-link">Contato</a></li>
                     <li><a href="pedidos.html" class="nav-link">Fazer Pedido</a></li>
                 </ul>
+                <!-- quando tiver na versão celular aparecer um menu de hamburguer-->
                 <div class="hamburger">
                     <span></span>
                     <span></span>
@@ -34,189 +40,205 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-            <div class="hero-content">
+    <!-- conteúdo principal -->
+    <main>
+        <section id="home" class="inicial">
+            <div class="conteudoInicial">
                 <!-- Chamada principal conduz usuário ao fluxo de pedidos -->
-            <h1 class="hero-title">Doces Artesanais</h1>
-            <p class="hero-subtitle">Feitos com amor e carinho especial para você</p>
-            <button class="cta-button" onclick="window.location.href='pedidos.html'">Fazer Pedido</button>
-        </div>
-        <div class="hero-image">
-            <div class="cake-placeholder">
-                <img src="Imagens/cliente (1).png" alt="Bolo decorado" class="hero-main-img">
+                <h1 class="tituloHome">Doces Artesanais</h1>
+                <p class="homeSubtitulo">Feitos com amor e carinho especial para você</p>
+                <!-- ao clicar ele vai direto para a pagina de pedidos-->
+                <button class="botaoPedidos" onclick="window.location.href='pedidos.html'">Fazer Pedido</button>
             </div>
-        </div>
-    </section>
-
-    <!-- Produtos Section -->
-    <section id="produtos" class="produtos">
-        <div class="container">
-            <h2 class="section-title">Nossos Produtos</h2>
-            <div class="produtos-grid">
-                <!-- Cards resumem catálogo e podem ganhar ações futuras via JS -->
-                <div class="produto-card">
-                    <div class="produto-image">
-                        <img data-src="https://delicious.com.br/wp-content/uploads/2020/11/DSC_0323.jpg" alt="Bolos Artesanais" class="lazy">
-                    </div>
-                    <h3>Bolos Artesanais</h3>
-                    <p>Bolos personalizados para todas as ocasiões especiais</p>
-                    <span class="preco">A partir de R$ 45,00</span>
-                    <button class="btn-produto">Encomendar</button>
-                </div>
-
-                <div class="produto-card">
-                    <div class="produto-image">
-                        <img data-src="https://www.sabornamesa.com.br/media/k2/items/cache/5003d452a8da016f3ed02a6385cf54e8_XL.jpg" alt="Brigadeiros Gourmet" class="lazy">
-                    </div>
-                    <h3>Brigadeiros Gourmet</h3>
-                    <p>Brigadeiros especiais com sabores únicos e irresistíveis</p>
-                    <span class="preco">R$ 3,50 cada</span>
-                    <button class="btn-produto">Encomendar</button>
-                </div>
-
-                <div class="produto-card">
-                    <div class="produto-image">
-                        <img data-src="https://static.giulianaflores.com.br/images/product/rs-4163-11244-1.jpg?ims=600x600" alt="Cookies Artesanais" class="lazy">
-                    </div>
-                    <h3>Cookies Artesanais</h3>
-                    <p>Cookies crocantes e deliciosos feitos na hora</p>
-                    <span class="preco">R$ 2,50 cada</span>
-                    <button class="btn-produto">Encomendar</button>
-                </div>
-
-                <div class="produto-card">
-                    <div class="produto-image">
-                        <img data-src="https://minhasreceitinhas.com.br/wp-content/uploads/2022/10/maxresdefault-2022-10-04T094903.823-730x365.jpg" alt="Sobremesas Geladas" class="lazy">
-                    </div>
-                    <h3>Sobremesas Geladas</h3>
-                    <p>Mousses, pavês e outras delícias refrescantes</p>
-                    <span class="preco">A partir de R$ 8,00</span>
-                    <button class="btn-produto">Encomendar</button>
-                </div>
-
-                <div class="produto-card">
-                    <div class="produto-image">
-                        <img data-src="https://www.estadao.com.br/resizer/v2/K2QRSMKUOJMBDPNNH32QFWFP2E.jpg?quality=80&auth=235aa4f2617f3921d805d05ad79c80b01f8bf4e1992830456c8e346f1c7d0e29&width=380" alt="Taças Gourmet" class="lazy">
-                    </div>
-                    <h3>Taças Gourmet</h3>
-                    <p>Taças especiais com camadas de sabor</p>
-                    <span class="preco">R$ 12,00 cada</span>
-                    <button class="btn-produto">Encomendar</button>
-                </div>
-
-                <div class="produto-card">
-                    <div class="produto-image">
-                        <img data-src="https://kitfestabh.com.br/wp-content/uploads/2023/12/docinhos-gourmet-mais-vendidos10-1-1024x576.webp" alt="Doces Especiais" class="lazy">
-                    </div>
-                    <h3>Doces Especiais</h3>
-                    <p>Criações exclusivas para momentos únicos</p>
-                    <span class="preco">Sob consulta</span>
-                    <button class="btn-produto">Consultar</button>
+            <!-- divisão de espaço entre a imagem e a chamada de ação-->
+            <div class="home-imagem">
+                <!-- logo do cliente-->
+                <div class="logoCliente">
+                    <img src="Imagens/cliente (1).png" alt="Bolo decorado" class="home-main-img">
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Sobre Section -->
-    <section id="sobre" class="sobre">
-        <div class="container">
-            <div class="sobre-content">
-                <!-- Bloco divide storytelling e foto da criadora -->
-                <div class="sobre-text">
-                    <h2>Sobre a Doceria Parégis</h2>
-                    <p>Somos uma doceria artesanal apaixonada por criar momentos doces e especiais. Cada produto é feito com ingredientes selecionados e muito carinho.</p>
-                    <p>Nossa missão é adoçar sua vida com sabores únicos e apresentações encantadoras que tornam qualquer ocasião ainda mais especial.</p>
-                    <div class="diferenciais">
-                        <div class="diferencial">
-                            <i class="fas fa-heart"></i>
-                            <span>Feito com amor</span>
+        </section>
+        <!-- Produtos -->
+        <section id="produtos" class="produtos">
+            <!-- dividindo os conteudos de produtos-->
+            <div class="container">
+                <h2 class="produtos-titulo">Nossos Produtos</h2>
+                <div class="produtos-grid">
+                    <!-- Cards resumem catálogo e podem ganhar ações futuras via JS -->
+                    <div class="produto-card">
+                        <div class="produto-image">
+                            <img data-src="https://delicious.com.br/wp-content/uploads/2020/11/DSC_0323.jpg"
+                                alt="Bolos Artesanais" class="lazy">
                         </div>
-                        <div class="diferencial">
-                            <i class="fas fa-leaf"></i>
-                            <span>Ingredientes naturais</span>
-                        </div>
-                        <div class="diferencial">
-                            <i class="fas fa-clock"></i>
-                            <span>Sempre fresquinho</span>
-                        </div>
+                        <h3>Bolos Artesanais</h3>
+                        <p>Bolos personalizados para todas as ocasiões especiais</p>
+                        <span class="preco">A partir de R$ 45,00</span>
+                        <button class="btn-produto">Encomendar</button>
                     </div>
-                </div>
-                <div class="sobre-image">
-                    <div class="chef-placeholder">
-                        <img src="Imagens/paula paregis.jfif    " alt="Chef confeiteiro" class="sobre-main-img">
+
+                    <div class="produto-card">
+                        <div class="produto-image">
+                            <img data-src="https://www.sabornamesa.com.br/media/k2/items/cache/5003d452a8da016f3ed02a6385cf54e8_XL.jpg"
+                                alt="Brigadeiros Gourmet" class="lazy">
+                        </div>
+                        <h3>Brigadeiros Gourmet</h3>
+                        <p>Brigadeiros especiais com sabores únicos e irresistíveis</p>
+                        <span class="preco">R$ 3,50 cada</span>
+                        <button class="btn-produto">Encomendar</button>
+                    </div>
+
+                    <div class="produto-card">
+                        <div class="produto-image">
+                            <img data-src="https://static.giulianaflores.com.br/images/product/rs-4163-11244-1.jpg?ims=600x600"
+                                alt="Cookies Artesanais" class="lazy">
+                        </div>
+                        <h3>Cookies Artesanais</h3>
+                        <p>Cookies crocantes e deliciosos feitos na hora</p>
+                        <span class="preco">R$ 2,50 cada</span>
+                        <button class="btn-produto">Encomendar</button>
+                    </div>
+
+                    <div class="produto-card">
+                        <div class="produto-image">
+                            <img data-src="https://minhasreceitinhas.com.br/wp-content/uploads/2022/10/maxresdefault-2022-10-04T094903.823-730x365.jpg"
+                                alt="Sobremesas Geladas" class="lazy">
+                        </div>
+                        <h3>Sobremesas Geladas</h3>
+                        <p>Mousses, pavês e outras delícias refrescantes</p>
+                        <span class="preco">A partir de R$ 8,00</span>
+                        <button class="btn-produto">Encomendar</button>
+                    </div>
+
+                    <div class="produto-card">
+                        <div class="produto-image">
+                            <img data-src="https://www.estadao.com.br/resizer/v2/K2QRSMKUOJMBDPNNH32QFWFP2E.jpg?quality=80&auth=235aa4f2617f3921d805d05ad79c80b01f8bf4e1992830456c8e346f1c7d0e29&width=380"
+                                alt="Taças Gourmet" class="lazy">
+                        </div>
+                        <h3>Taças Gourmet</h3>
+                        <p>Taças especiais com camadas de sabor</p>
+                        <span class="preco">R$ 12,00 cada</span>
+                        <button class="btn-produto">Encomendar</button>
+                    </div>
+
+                    <div class="produto-card">
+                        <div class="produto-image">
+                            <img data-src="https://kitfestabh.com.br/wp-content/uploads/2023/12/docinhos-gourmet-mais-vendidos10-1-1024x576.webp"
+                                alt="Doces Especiais" class="lazy">
+                        </div>
+                        <h3>Doces Especiais</h3>
+                        <p>Criações exclusivas para momentos únicos</p>
+                        <span class="preco">Sob consulta</span>
+                        <button class="btn-produto">Consultar</button>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contato Section -->
-    <section id="contato" class="contato">
-        <div class="container">
-            <h2 class="section-title">Entre em Contato</h2>
-            <div class="contato-content">
-                <!-- Metade esquerda apresenta canais diretos, direita coleta formulário -->
-                <div class="contato-info">
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Telefone</h4>
-                            <p>(11) 98092-7318</p>
+        <!-- Sobre Section -->
+        <section id="sobre" class="sobre">
+            <div class="container">
+                <div class="sobre-content">
+                    <!-- Bloco divide storytelling e foto da criadora -->
+                    <div class="sobre-text">
+                        <h2>Sobre a Doceria Parégis</h2>
+                        <p>Somos uma doceria artesanal apaixonada por criar momentos doces e especiais. Cada produto é
+                            feito
+                            com ingredientes selecionados e muito carinho.</p>
+                        <p>Nossa missão é adoçar sua vida com sabores únicos e apresentações encantadoras que tornam
+                            qualquer ocasião ainda mais especial.</p>
+                        <div class="diferenciais">
+                            <div class="diferencial">
+                                <i class="fas fa-heart"></i>
+                                <span>Feito com amor</span>
+                            </div>
+                            <div class="diferencial">
+                                <i class="fas fa-leaf"></i>
+                                <span>Ingredientes naturais</span>
+                            </div>
+                            <div class="diferencial">
+                                <i class="fas fa-clock"></i>
+                                <span>Sempre fresquinho</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>E-mail</h4>
-                            <p>paregisdoceria@gmail.com</p>
+                    <div class="sobre-image">
+                        <div class="chef-placeholder">
+                            <img src="Imagens/paula paregis.jfif    " alt="Chef confeiteiro" class="sobre-main-img">
                         </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Endereço</h4>
-                            <p>Rua Alambari, São Paulo, Brasil</p>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/sobremesasparegis?igsh=M2RreHJldnExNndk"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
-                <form class="contato-form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Seu nome" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Seu e-mail" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" placeholder="Seu telefone">
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Sua mensagem" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn-enviar">Enviar Mensagem</button>
-                </form>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="logo">
-                    <img src="Imagens/cliente (1).png" alt="" width="50px">
-                    <span>Parégis Doceria</span>
+        <!-- Contato Section -->
+        <section id="contato" class="contato">
+            <div class="container">
+                <h2 class="section-title">Entre em Contato</h2>
+                <div class="contato-content">
+                    <!-- Metade esquerda apresenta canais diretos, direita coleta formulário -->
+                    <div class="contato-info">
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Telefone</h4>
+                                <p>(11) 98092-7318</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>E-mail</h4>
+                                <p>paregisdoceria@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Endereço</h4>
+                                <p>Rua Alambari, São Paulo, Brasil</p>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/sobremesasparegis?igsh=M2RreHJldnExNndk"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <form class="contato-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Seu e-mail" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Seu telefone">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Sua mensagem" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+                    </form>
                 </div>
-                <p>&copy; 2025 Parégis Doceria. Todos os direitos reservados.</p>
             </div>
-        </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="logo">
+                        <img src="Imagens/cliente (1).png" alt="" width="50px">
+                        <span>Parégis Doceria</span>
+                    </div>
+                    <p>&copy; 2025 Parégis Doceria. Todos os direitos reservados.</p>
+                </div>
+            </div>
+    </main>
     </footer>
 
     <script src="JS/script.js"></script>
 </body>
+
 </html>

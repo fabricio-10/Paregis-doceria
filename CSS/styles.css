@@ -1,9 +1,10 @@
+/*padrão*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+/*trocar isso*/
 :root {
     --primary-pink: hsl(241, 89%, 22%);
     --primary-purple: #111111;
@@ -18,21 +19,28 @@
     --gradient-light: linear-gradient(135deg, var(--light-pink), var(--light-purple));
     --shadow: 0 10px 25px rgba(139, 92, 246, 0.1);
 }
-
+/* troquei a fonte para poppins
+ - ajustei o tamnho da linha
+ - mudei a cor 
+ - e coloquei que o usuario não vera a parte oculta quando tiver espaço na direiita ou na esquerda
+ */
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    color: var(--text-dark);
+    color: black;
     overflow-x: hidden;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+/* HEADER */
 
-/* Header */
+/*aqui deixei a posição fixa
+tirei a margin do topo
+coloquei 100% da largura
+mudei a cor de fundo
+adicionei um filtro que atrás dos elementos ele ficará azul
+e aumentei a ordem de empilahamento dos elementos 
+e coloquei uma trasição
+*/
 .header {
     position: fixed;
     top: 0;
@@ -42,51 +50,65 @@ body {
     z-index: 1000;
     transition: all 0.3s ease;
 }
-
-.navbar {
-    padding: 1rem 0;
+/*aumentei o espaçamento interno*/
+.navegacao{
+    padding: 16px 0;
 }
-
-.navbar .container {
+/* aqui utilizei o flex
+deixei alinhando para que tudo fique na mesma linha
+e alinhei os itens no centro*/
+.navegacao .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
+/* todos os container ficarão com a largura de 1200px
+sem margem e espaçamento 
+espaçamento somente na horizontal*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/*coloquei display flexivel
+tirei a lista do menu
+e pus espaçamento interno*/
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+/*deixei flexivel
+alinhei os itens no centro
+pus um espaçamento interno entre os conteudos
+aumentei a fonte
+*/
 .logo {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 700;
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
-
-.logo i {
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 2rem;
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
+/*tirei a decoração do texto
+mudei a cor dele
+aumentei o peso da fonte
+aumentei a transição
+e deixei a posição relativa*/
 .nav-link {
+    margin-top: 10px;
     text-decoration: none;
     color: var(--text-dark);
     font-weight: 500;
     transition: all 0.3s ease;
     position: relative;
 }
-
+/*ao selecionar o menu 
+o menu vai ficar com a posição absoluta
+tirei o espaçamento de de baixo e da esquerda
+aumentei o tamanho da caixa
+mudei as cores
+e adicionei uma transição*/
 .nav-link::after {
     content: '';
     position: absolute;
@@ -102,13 +124,18 @@ body {
 .nav-link:hover::after {
     width: 100%;
 }
-
+/* tirei a vizualização dele
+deixei ele em colunas
+e deixei ele clicável*/
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
 }
-
+/* aumentei a largura e a altura
+mudei a cor do fundo
+adicionei margem
+e transição*/
 .hamburger span {
     width: 25px;
     height: 3px;
@@ -117,9 +144,17 @@ body {
     transition: 0.3s;
 }
 
-/* Hero Section */
-.hero {
-    min-height: 100vh;
+/* conteúdo principal */
+
+/*o minimo de largura é de 800pixel
+display flex
+alinhamos os itens no centro
+mudamos a cor de fundo
+deixei a posição relativa
+ocultei os limtes do conteúdo
+*/
+.inicial {
+    min-height: 800px;
     display: flex;
     align-items: center;
     background: var(--gradient-light);
@@ -127,9 +162,8 @@ body {
     position: relative;
     overflow: hidden;
 }
-
-.hero::before {
-    /* Sobreposição animada com padrão pontilhado para dar textura ao fundo */
+/* Sobreposição animada com padrão pontilhado para dar textura ao fundo */
+.inicial::before {
     content: '';
     position: absolute;
     top: -50%;
@@ -139,32 +173,41 @@ body {
     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="%23ff6b9d" opacity="0.1"/></svg>');
     animation: float 20s ease-in-out infinite;
 }
-
-.hero-content {
+/* deixei o display flexivel
+com o maximo de largura de 600px
+e mudei a ordem de posicionamento*/
+.conteudoInicial {
     flex: 1;
     max-width: 600px;
     z-index: 2;
 }
-
-.hero-title {
-    font-size: clamp(2.5rem, 6vw, 4rem);
+/* define o maximo e o minimo do tamanho da fonte
+aumentei o peso da fonte
+mudei a cor do fundo
+coloquei a margem e animação
+*/
+.tituloHome {
+    font-size: clamp(40px, 6vw, 64px);
     font-weight: 700;
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
     animation: slideInLeft 1s ease-out;
 }
-
-.hero-subtitle {
-    font-size: 1.2rem;
-    color: var(--text-light);
-    margin-bottom: 2rem;
+/*aumentei a fonte
+mudei cor
+adicionei margem e coloquei animação*/
+.homeSubtitulo {
+    font-size: 19.2px;
+    color: black;
+    margin-bottom: 32px;
     animation: slideInLeft 1s ease-out 0.2s both;
 }
-
-.cta-button {
+/*mudei a cor de fundo e a cor do texto
+adicionei bordas e espaçamento externo
+aumentei o tamnho da fonte
+deixei ele cliavel
+adicionei uma transição
+adicionei sombras e animação*/
+.botaoPedidos{
     background: var(--gradient);
     color: white;
     border: none;
@@ -177,22 +220,22 @@ body {
     box-shadow: var(--shadow);
     animation: slideInLeft 1s ease-out 0.4s both;
 }
-
-.cta-button:hover {
+/* quando clicar ele sobe e poe sombras*/
+.botaoPedidos:hover {
     transform: translateY(-3px);
     box-shadow: 0 15px 35px rgba(139, 92, 246, 0.2);
 }
-
-.hero-image {
+/* deixei o display flexivel, alinhei os conteúdos no centro e mudei
+o posicionamento*/
+.home-imagem {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 2;
 }
-
-.cake-placeholder {
-    /* Mantém a imagem principal em destaque com formato circular */
+ /* Mantém a imagem principal em destaque com formato circular */
+.logoCliente {
     width: 300px;
     height: 300px;
     border-radius: 50%;
@@ -203,25 +246,21 @@ body {
     animation: bounce 2s ease-in-out infinite;
     overflow: hidden;
 }
-
-.hero-main-img {
+/* aqui o tamanho da imagem esta 100% do tamanho do circulo*/
+.home-main-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.cake-placeholder i {
-    font-size: 8rem;
-    color: white;
-}
-
 /* Produtos Section */
+/*aumentei o conteúdo externo e mudei a cor do fundo*/
 .produtos {
     padding: 100px 0;
     background: var(--white);
 }
 
-.section-title {
+.produtos-titulo {
     text-align: center;
     font-size: 2.5rem;
     font-weight: 700;
